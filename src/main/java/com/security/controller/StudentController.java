@@ -20,8 +20,6 @@ public class StudentController {
 	@Autowired
 	private StudentRepository repository;
 
-	List<Student> studnets = Arrays.asList(new Student(1, "AAA"), new Student(2, "BBB"));
-
 	@GetMapping("/students")
 	public List<Student> getStudents(HttpServletRequest request) {
 		List<Student> listOfStudents = repository.findAll();

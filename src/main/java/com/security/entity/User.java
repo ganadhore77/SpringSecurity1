@@ -6,24 +6,24 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Student {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	private String name;
+	private String username;
 
 	private String password;
 
-	public Student() {
+	public User() {
 
 	}
 
-	public Student(Integer id, String name, String password) {
+	public User(Integer id, String username, String password) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.username = username;
 		this.password = password;
 	}
 
@@ -35,16 +35,16 @@ public class Student {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void stUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
-		return name;
+		return password;
 	}
 
 	public void setPassword(String password) {
@@ -53,7 +53,6 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", password=" + password + "]";
+		return "Student [id=" + id + ", name=" + username + ", password=" + password + "]";
 	}
-
 }
