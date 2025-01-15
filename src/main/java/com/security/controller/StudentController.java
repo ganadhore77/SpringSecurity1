@@ -24,9 +24,9 @@ public class StudentController {
 
 	@GetMapping("/students")
 	public List<Student> getStudents(HttpServletRequest request) {
-
+		List<Student> listOfStudents = repository.findAll();
 		System.out.println("SESSIONID : " + request.getSession().getId());
-		return studnets;
+		return listOfStudents;
 	}
 
 	@PostMapping("/students")
